@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Corona's Pizza </title>
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAB50dEAAAAAAAA36wAA6+sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERETMzIjMAERERMiMiMwAREREyIzMzABERERMyIzAAEREREzIjAAARERERMzMAAREREREQAAARERERERAAARERERERERERERERERERERERERH//wAA//8AAP//AAD//wAA//8AAP//AADADwAAwA8AAMAPAADgDwAA4A8AAPAfAAD4PwAA+H8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+  <header >
+
+    <h1 style="text-align: center;">Pizza Corona</h1>
+    <div class="" style="text-align: center;">
+      <img src="images/pizza.png" alt="slice of pizza drawing">
+    </div>
+    <h2 style="text-align: center;">Spread the taste!!!</h2>
+    <h2>Build your pizza: </h2>
+  </header>
+  <main style="background-color: #eeeeee">
+    <form class="" action="index.html" method="post">
+      <fieldset>
+        <legend>
+          <h2 Style="color: #FF0000;"><strong>Step 1: Provide your information</strong></h2>
+        </legend>
+        <!-- Section to provide delivery information -->
+        <div class="">
+          <label for="firstName">First Name: </label><span style="color: red !important; display: inline; float: none;">*</span>
+          <input type="text" id="firstName" name="firstName" value="" placeholder="John">
+
+          <label for="lastName">Last Name: </label><span style="color: red !important; display: inline; float: none;">*</span>
+          <input type="text" id="lastName" name="lastName" value="" placeholder="Wick">
+
+          <label for="phone">Phone number</label><span style="color: red !important; display: inline; float: none;">*</span>
+          <input type="tel" name="phone" id="phone" placeholder="3212160533">
+
+          <!-- Address & contact information form -->
+          <label for="address">Address: </label><span style="color: red !important; display: inline; float: none;">*</span>
+          <input type="text" id="address" name="address" value="" placeholder="1 Georgian Dr">
+          <label for="email">Email: </label><span style="color: red !important; display: inline; float: none;">*</span>
+          <input type="email" name="email" id="email" placeholder="johnwick@hotmail.com"><br><br>
+          <label for="apartment">Apartment, suite, etc: </label><span style="color: red !important; display: inline; float: none;">*</span><br>
+          <textarea name="name" id="apartment" rows="5" cols="40" placeholder="Locate building 3, go to 2nd floor, office 1A"></textarea><br><br>
+          <label for="city">City</label><span style="color: red !important; display: inline; float: none;">*</span>
+          <input type="text" name="city" id="city" placeholder="Barrie">
+          <label for="province">Province</label><span style="color: red !important; display: inline; float: none;">*</span>
+          <!-- Select menu to choose province -->
+          <select id="province">
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="MB">Manitoba</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NL">Newfoundland and Labrador</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="ON" selected>Ontario</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="QC">Quebec</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="NT">Northwest Territories</option>
+            <option value="NU">Nunavut</option>
+            <option value="YT">Yukon</option>
+          </select>
+          <label for="postalCode">Postal Code: </label><span style="color: red !important; display: inline; float: none;">*</span>
+          <input type="text" name="PostalCode" id="postalCode" placeholder="L4M 3X9">
+        </div>
+
+      </fieldset>
+      <!-- fieldset dedicated to size and quantity -->
+      <fieldset>
+        <legend>
+          <h2 style="color: #FF0000; "><strong>Step 2: Customize your pizza </strong></h2>
+        </legend>
+        <fieldset style="width: 48%; margin: auto;">
+          <legend style="text-align: center;">
+            Size & Qty:
+          </legend>
+          <!-- Radio buttons to choose the pizza size -->
+          <div style="margin-left: 50px;">
+            <input type="radio" id="sm" name="size" value="Small">
+            <label for="sm">Small - 4 Slices</label>
+
+            <input type="radio" id="md" name="size" value="Medium">
+            <label for="md">Medium - 8 Slices </label>
+
+            <input type="radio" id="lg" name="size" value="Large">
+            <label for="lg">Large - 12 Slices</label>
+
+            <input type="radio" id="giant" name="size" value="Gigantic">
+            <label for="giant">Gigantic - 135 Slices</label><br><br>
+          </div>
+          <!-- number input to choose amount of pizzas, minimum 1 maximum 10 -->
+          <div style="margin-left: 50px;">
+            <label for="qty">Quantity: </label>
+            <input type="number" name="qty" id="qty" min="1" max="10">
+          </div>
+
+
+
+        </fieldset>
+        <div style="width: 50%; margin: auto;">
+          <!-- fieldset dedicated to crust, cheese and sauce -->
+          <fieldset>
+            <legend style="text-align: center;">Pick your Crust, Cheese & Sauce: </legend>
+            <div style="margin-left: 200px;">
+              <!-- Table to organize type of crust, cheese and sauce -->
+              <table>
+                <tr>
+                  <th>Crust: </th>
+                  <th>Cheese: </th>
+                  <th>Sauce: </th>
+                </tr>
+                <tr>
+                  <td>
+                    <!-- Select menu with options groups to pick crust one option -->
+                    <select class="" id="crust" name="typeOfcrust">
+                      <optgroup label="Cheese Filled (Only thick Crust)">
+                        <option value="provelone">Provelone</option>
+                        <option value="mozarella">Mozarella</option>
+                        <option value="cheddar">Cheddar </option>
+                        <option value="parmesan">Parmesan</option>
+                      </optgroup>
+                      <optgroup label="Regular">
+                        <option value="Thin" selected>Thin Crust</option>
+                        <option value="Thick">Thick Crust</option>
+                        <option value="Deep">Deep Crust</option>
+
+                      </optgroup>
+
+                    </select><br><br>
+                  </td>
+                  <td>
+                    <!-- multiple select menu to pick cheese, multiple pick -->
+                    <select class="" id="cheese" name="typeOfCheese" multiple>
+                      <option value="mozarella">Mozarella</option>
+                      <option value="provelone">Provelone</option>
+                      <option value="cheddar">Cheddar</option>
+                      <option value="parmesan">Parmesan</option>
+
+                    </select><br><br>
+                  </td>
+                  <td>
+                    <!-- Radio buttons to pick sauce, just one pick -->
+                    <input type="radio" id="italian">
+                    <label for="italian">Italian Homemade</label><br>
+                    <input type="radio" id="bbq">
+                    <label for="bbq">BBQ</label><br>
+                    <input type="radio" id="white">
+                    <label for="white">White Sauce</label><br>
+                    <input type="radio" id="olive">
+                    <label for="olive">Olive Oil & Garlic</label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </fieldset>
+        </div>
+
+        <div style="width: 50%;margin: auto;">
+          <!-- Fieldset dedicated to toppings -->
+          <fieldset>
+            <legend style="text-align: center;">Pick your toppings: </legend>
+            <div style="margin-left: 250px;">
+              <!-- Table with meat an other ingredients, scalable to more ingredients in the future -->
+              <table>
+                <tr>
+                  <th>Meats: </th>
+                  <th>Other ingredients: </th>
+                </tr>
+                <tr>
+                  <td>
+                    <p>
+                      <input type="checkbox" id="pepperoni" name="meattop" value="">
+                      <label for="pepperoni">Pepperoni</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="bacon" name="meattop" value="">
+                      <label for="bacon">Bacon</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="chicken" name="meattop" value="">
+                      <label for="chicken">Chicken</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="beef" name="meattop" value="">
+                      <label for="beef">Ground Beef</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="ham" name="meattop" value="">
+                      <label for="ham">Ham</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="salami" name="meattop" value="">
+                      <label for="salami">Salami</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="anchovy" name="meattop" value="">
+                      <label for="anchovy">Anchovy</label>
+                    </p>
+                  </td>
+
+                  <td>
+                    <p>
+                      <input type="checkbox" id="tomatoe" name="vegtop" value="">
+                      <label for="tomatoe">Tomatoes</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="pepper" name="vegtop" value="">
+                      <label for="pepper">Pepper</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="pineapple" name="vegtop" value="">
+                      <label for="pineapple">Pineapple</label>
+                    </p>
+
+                    <p>
+                      <input type="checkbox" id="mushrooms" name="vegtop" value="">
+                      <label for="mushrooms">Mushrooms</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="olives" name="vegtop" value="">
+                      <label for="olives">Olives</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="onions" name="vegtop" value="">
+                      <label for="onions">Onion</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="oregano" name="vegtop" value="">
+                      <label for="oregano">Oregano</label>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </fieldset>
+        </div>
+      </fieldset>
+      <div style="margin-left: 150px;">
+        <!-- table to be able to organize dessert options with images and radio buttons for each -->
+        <table>
+
+          <tr>
+            <td>
+              <fieldset>
+                <legend>
+                  <h2 style="color: #FF0000;"><strong>Step 3: Add a dessert (optional)</strong></h2>
+                </legend>
+                <table>
+                  <!-- Radio buttons to pick ONE dessert -->
+                  <tr>
+                    <th>
+                      <label for="chocolate">Chocolate Cake</label>
+                      <input type="radio" name="dessert" id="chocolate">
+                    </th>
+                    <th>
+                      <label for="cinnamon">Cinnamon Roll</label>
+                      <input type="radio" name="dessert" id="cinnamon">
+                    </th>
+                    <th>
+                      <label for="brownie">Brownie </label>
+                      <input type="radio" name="dessert" id="brownie">
+                    </th>
+                  </tr>
+                  <tr>
+                    <!-- images related to dessert options -->
+                    <td>
+                      <img src="images/chocolatecake.png" alt="Chocolate Cake Image">
+                    </td>
+                    <td>
+                      <img src="images/cinamon.png" alt="Cinnamon Roll Image">
+                    </td>
+                    <td>
+                      <img src="images/brownie.png" alt="Brownie Image">
+                    </td>
+                  </tr>
+                </table>
+              </fieldset>
+            </td>
+            <td>
+              <!-- Fieldset dedicated to soft drinks selection -->
+              <fieldset>
+                <legend>
+                  <h2 style="color: #FF0000;"><strong>Step 4: Don't want you to choke, have a drink (Optional) </strong></h2>
+                </legend>
+
+                <table>
+                  <tr>
+                    <th>
+                      Drink:
+                    </th>
+                    <th>
+                      Size:
+                    </th>
+                    <th>
+                      Selection:
+                    </th>
+                  </tr>
+                  <tr>
+                    <!-- Selection menu to pick ONE drink -->
+                    <td>
+                      <select name="drinkselection">
+                        <option value="Coke" selected>Coke</option>
+                        <option value="Fanta">Fanta</option>
+                        <option value="Sprite">Sprite</option>
+
+                      </select>
+                    </td>
+                    <td>
+                    <!-- Radio buttons to pick ONE size of drink -->
+                      <input type="radio" name="drinksize" id="300mL">
+                      <label for="300mL">300mL</label><br>
+
+                      <input type="radio" name="drinksize" id="1.5L">
+                      <label for="1.5L">1.5L</label><br>
+
+                      <input type="radio" name="drinksize" id="2.5L">
+                      <label for="2.5L">2.5L</label><br>
+                    </td>
+                    <td>
+                      <!-- Image showing the selection of softdrinks -->
+                      <img src="images/softdrinks.png" alt="Image of Softdrinks selection">
+                    </td>
+
+                  </tr>
+                </table>
+              </fieldset>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- This fieldset is dedicated to credit card payment information -->
+      <fieldset>
+        <legend>
+          <h2 style="color: #FF0000;"><strong>Step 5: It's not free bud, pay!!</strong></h2>
+        </legend>
+        <label for="nameOnCard">Name On Card: </label><span style="color: red !important; display: inline; float: none;">*</span>
+        <input type="text" id="nameOnCard" placeholder="John Wick"><br><br>
+        <label for="creditCardnum">Credit card number: </label><span style="color: red !important; display: inline; float: none;">*</span>
+        <input type="number" name="cardnumber" id="creditCardnum" placeholder="1111-2222-3333-4444"><br><br>
+        <label for="expmonth">Expiration Month: </label><span style="color: red !important; display: inline; float: none;">*</span>
+        <!-- Expiration month input with min value in 1 and max in 12 -->
+        <input type="number" name="expirationdate" id="expmonth" placeholder="MM" min="1" max="12">
+        <label for="expyear">Expiration Year: </label><span style="color: red !important; display: inline; float: none;">*</span>
+        <!-- Expiration year input with min value in 20 and max value in 50  -->
+        <input type="number" name="expirationdate" id="expyear" min="20" max="50" placeholder="YY">
+        <label for="cvv">CVV</label><span style="color: red !important; display: inline; float: none;">*</span>
+        <!-- CVV code with a placeholder to indicate user that he or she should input 3 digits -->
+        <input type="number" id="cvv" name="cvv" placeholder="222" min="000" max="999"><br>
+        <h5><em>Clicking reset will clear all the information provided!!!!</em></h5>
+        <!-- The submit button will place the order -->
+        <input type="submit" value="Submit Order">
+        <!-- Reset button will clear the entire form -->
+        <input type="reset" name="reset" value="Reset Order">
+
+      </fieldset>
+
+    </form>
+  </main>
+  <footer style="text-align: center;">
+
+    <small>
+      Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+    </small>
+
+  </footer>
+
+</body>
+
+</html>
